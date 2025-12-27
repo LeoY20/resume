@@ -20,7 +20,7 @@
 \usepackage{amsmath} % for math
 \usepackage[
     pdftitle={Leo Yao's Resumé},
-    pdfauthor={Roger Fan},
+    pdfauthor={Leo Yao},
     pdfcreator={LaTeX},
     colorlinks=true,
     urlcolor=primaryColor
@@ -164,7 +164,7 @@
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
-        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}leoyao@andrew.cmu.edu}}%
+        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}leoyao@cmu.edu}}%
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
@@ -175,8 +175,8 @@
         % \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}yourwebsite.com}}%
         % \kern 0.25 cm%
         % \AND%
-        % \kern 0.25 cm%
-        % \mbox{\hrefWithoutArrow{https://linkedin.com/in/yourusername}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}yourusername}}%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/leowo/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}leowo}}%
         % \kern 0.25 cm%
         % \AND%
         \kern 0.25 cm%
@@ -230,12 +230,14 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{QPA:} 3.64/4.00 
-                \item \textbf{Relevant Coursework:} Principles of Imperative Computation, Introduction to Computer Systems, Principles of Functional Programming, Introduction to Computer Security, Matrices and Linear Transformations, Calculus in 3D, Probability and Statistical Inference I, Statistical Graphics and Visualization.
-                \item \textbf{Awards:} Dean's List, High Honors (Spring 2025)
+                \item \textbf{QPA:} 3.68/4.00 
+                \item \textbf{Relevant Coursework:} Introduction to Computer Systems, Introduction to Machine Learning, 
+                Principles of Functional Programming, Introduction to Computer Security, Principles of Imperative Computation,
+                Probability and Statistical Inference I/II, Statistical Computing
+                \item \textbf{Awards:} Dean's List, High Honors (Spring 2025, Fall 2025)
             \end{highlights}
         \end{onecolentry}
-    
+
     \section{Experience}
         \begin{twocolentry}{
             \text{September 2025 - Present}}
@@ -247,14 +249,16 @@
         \end{twocolentry}
 
         \vspace{0.10 cm}
+        \begin{onecolentry}
             \begin{highlights}
-                \item Researching deployment of real-time machine learning algorithms for the CMS experiment at CERN LHC.
-                \item Developing high-granularity quantization-aware training features for \href{https://github.com/sharc-lab/FlowGNN}{flowGNN}, a library 
-                for deploying various types of Graph Neural Networks on FPGA chips in real-time.
+                \item Implemented a high-granularity quantization-aware training pipeline for FPGA-based GNNs
+                used by CERN's CMS experiment with PyTorch, PyG, and HGQ2 while optimizing for microsecond-latency performance. %tbd add performance
+                \item Developing transformers for real-time rapid reconstruction of High-Granularity Calorimeter energy clusters.
             \end{highlights}
+        \end{onecolentry}
         \begin{twocolentry}{
         \text{June 2025 – August 2025}}
-            \textbf{Machine Learning Researcher}
+            \textbf{Machine Learning Research Assistant}
         \end{twocolentry}
         \begin{twocolentry}{
             \textit{Pittsburgh, PA}}
@@ -264,10 +268,8 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Cleaned and preprocessed household energy use data with R Tidyverse, Pandas, NumPy, and SciKit-Learn.
-                \item Developed an artificial neural network (ANN) in PyTorch to predict households' annual cooling energy, engineering a performance improvement of over 75\% by implementing LightGBM-based feature selection and advanced hyperparameter tuning (e.g. learning rate annealing, early stopping).
-                \item Visualized model performance using MatPlotLib; presented graphics in a poster to peers.
-                \item Managed codebase and tracked experiments using Git. Poster and code available upon request.
+                \item Engineered a data preprocessing pipeline using R Tidyverse, Pandas, NumPy, and SciKit-Learn to clean and normalize large-scale energy consumption datasets.
+                \item Developed a neural network with PyTorch to forecast households' annual cooling energy, engineering a 75\% accuracy improvement by implementing LightGBM-based feature selection and hyperparameter tuning (e.g. learning rate annealing, early stopping).
             \end{highlights}
         \end{onecolentry}
 
@@ -290,46 +292,97 @@
         %     \end{highlights}
         % \end{onecolentry}
     \section{Projects}
-        \begin{twocolentry}{
-        \text{May 2025 – July 2025}}
-            \textbf{Computer Systems (in C language)}
-        \end{twocolentry}
+        % shortened version
+        % \begin{twocolentry}{
+        % \text{May 2025 – July 2025}}
+        %     \textbf{Computer Systems (in C language, all code viewable upon request)}
+        % \end{twocolentry}
 
+        % \vspace{0.10 cm}
+        % \begin{onecolentry}
+        %     \begin{highlights}
+        %         \item \textbf{Dynamic Memory Allocator}: Developed a dynamic memory allocator in C for Linux. Achieved 74.3\% memory utilization and a throughput of 15885 kilo-operations per second, ranking at the top of the class.
+        %         \item \textbf{Tiny Shell}: Built a tiny Linux shell with foreground/background job control and I/O redirection.
+        %         \item \textbf{Web Proxy Server}: Created a multithreaded web proxy server that facilitates communication between clients and web servers.
+        %         \item \textbf{Shark File System}: Developed a thread-safe concurrent file system with standard features (e.g. file renaming, file descriptor position management), optimizing multithreaded performance and correctness with mutex synchronization.
+        %     \end{highlights}
+        % \end{onecolentry}
+
+
+        \begin{twocolentry}{\text{June 2025}}
+            \textbf{Cache Simulator}
+        \end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{Dynamic Memory Allocator}: Developed a dynamic memory allocator in C for Linux. Achieved 74.3\% memory utilization and a throughput of 15885 kilo-operations per second, ranking at the top of the class.
-                \item \textbf{Tiny Shell}: Built a tiny Linux shell with foreground/background job control and I/O redirection.
-                \item \textbf{Web Proxy Server}: Created a multithreaded web proxy server that facilitates communication between clients and web servers.
-                \item \textbf{Shark File System}: Developed a thread-safe concurrent file system with standard features (e.g. file renaming, file descriptor position management), optimizing multithreaded performance and correctness with mutex synchronization.
+                \item Developed a write-back, write-allocate cache simulator in C with LRU eviction policy.
+                \item Designed a flexible architecture to parse instruction traces and accurately model hit/miss/eviction rates across various cache geometries.
             \end{highlights}
         \end{onecolentry}
-    \section{Leadership}
-        \begin{twocolentry}{
-            \text{November 2024 – Present}}
-            \textbf{Joint Funding Committee Member}
+        \begin{twocolentry}{\text{July 2025}}
+            \textbf{Dynamic Memory Allocator} 
         \end{twocolentry}
-        \begin{twocolentry}{
-            \textit{Pittsburgh, PA}}
-            \textit{CMU Student Government}
-        \end{twocolentry}
-
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Managing the distribution and allocation of approximately \$2.1 million to 300+ student organizations.
-                \item Acting as a liaison between student organizations and Student Government, advocating for their financial needs during weekly JFC meetings.
+                \item Developed a dynamic memory allocator using segregated free lists in C. Achieved 74.3\% memory utilization and 15885 kilo-operations per second, ranking first in the class by performance.
             \end{highlights}
-        \end{onecolentry}    
+        \end{onecolentry}
+        \begin{twocolentry}{\text{July 2025}}
+            \textbf{Tiny Linux Shell}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a lightweight Linux shell in C featuring job control and I/O redirection.
+                \item Improved performance and mitigated race conditions by implementing signal masks and custom signal handlers to manage background process synchronization.
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{\text{July 2025}}
+            \textbf{Web Proxy Server}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created a web proxy server in C. Optimized performance and reduced latency by introducing concurrency with POSIX Threads to handle individual client HTTP GET requests.
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{\text{July 2025}}
+            \textbf{Shark File System}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed a thread-safe concurrent FAT-style file system in C with file creation, deletion, renaming, reading, and writing capabilities.
+                \item Optimized performance and correctness with mutex synchronization to mitigate race conditions.
+            \end{highlights}
+        \end{onecolentry}
+
+    % \section{Leadership}
+    %     \begin{twocolentry}{
+    %         \text{November 2024 – Present}}
+    %         \textbf{Joint Funding Committee Member}
+    %     \end{twocolentry}
+    %     % \begin{twocolentry}{
+    %     %     \textit{Pittsburgh, PA}}
+    %     %     \textit{CMU Student Government}
+    %     % \end{twocolentry}
+
+    %     \vspace{0.10 cm}
+    %     \begin{onecolentry}
+    %         \begin{highlights}
+    %             \item Managing the distribution and allocation of approximately \$2.1 million to 300+ student organizations.
+    %         \end{highlights}
+    %     \end{onecolentry}    
     % \section{Awards}
     %     \begin{onecolentry}
     %         \textbf{Dean's List, High Honors} (Spring 2025)
     %     \end{onecolentry}
     \section{Skills}
         \begin{onecolentry}
-            \textbf{Programming Languages:} Python, C, R, Java, Dafny, Standard ML, x86-64 Assembly \newline
-            \textbf{Frameworks/Libraries:} Pandas, NumPy, SciKit-Learn, PyTorch, MatPlotLib, Tidyverse, ggplot2 \newline
-            \textbf{Developer Tools:} Git, Linux
+            \textbf{Programming Languages:} Python, C, SQL, Java, SML, Dafny, x86-64 Assembly, R \newline
+            \textbf{Frameworks/Libraries:} Pandas, NumPy, Scikit-Learn, PyTorch, Matplotlib, Tidyverse \newline
+            \textbf{Developer Tools:} Git, Linux, PortSwigger Burp Suite, GDB, Valgrind
         \end{onecolentry}
     \vspace{0.20 cm}
 
