@@ -3,8 +3,8 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
+    top=1.6 cm, % seperation between body and page edge from the top
+    bottom=1.6 cm, % seperation between body and page edge from the bottom
     left=2 cm, % seperation between body and page edge from the left
     right=2 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
@@ -59,26 +59,26 @@
     \color{gray}\textit{\small Leo Yao - Page \thepage{} of \pageref*{LastPage}}
 }{}{} % replace number by desired string
 \makeatother
-\pagestyle{customFooterStyle}
+\pagestyle{empty}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\needspace{2\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{
     % left space:
     -1pt
 }{
     % top space:
-    0.3 cm
+    0.18 cm
 }{
     % bottom space:
-    0.2 cm
+    0.12 cm
 } % section title spacing
 
 \renewcommand\labelitemi{$\circ$} % custom bullet points
 \newenvironment{highlights}{
     \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
+        topsep=0.06 cm,
+        parsep=0.06 cm,
         partopsep=0pt,
         itemsep=0pt,
         leftmargin=0.4 cm + 10pt
@@ -113,7 +113,7 @@
 \newenvironment{twocolentry}[2][]{
     \onecolentry
     \def\secondColumn{#2}
-    \setcolumnwidth{\fill, 4.5 cm}
+    \setcolumnwidth{\fill, 5 cm}
     \begin{paracol}{2}
 }{
     \switchcolumn \raggedleft \secondColumn
@@ -164,7 +164,7 @@
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
-        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}leoyao@andrew.cmu.edu}}%
+        \mbox{\hrefWithoutArrow{mailto:leoyao@andrew.cmu.edu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}leoyao@andrew.cmu.edu}}%
         \kern 0.25 cm%
         \AND%
         \kern 0.25 cm%
@@ -217,7 +217,7 @@
     \section{Education}
         \begin{twocolentry}{
         % two-col takes in 1 arg for the right one and dynamic left.
-        \text{August 2024 – May 2027}}
+        \text{August 2024 – May 2028}}
             \textbf{Carnegie Mellon University}
         \end{twocolentry}
         % degree, dates
@@ -226,60 +226,74 @@
             \textit{B.S. in Computer Science and Statistics \& Machine Learning}
         \end{twocolentry}
         
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{QPA:} 3.68/4.00 
-                \item \textbf{Relevant Coursework:} Computer Systems, Computer Security, Theoretical Computer Science, Functional Programming, Machine Learning, Imperative Computation (Data Structures \& Algorithms)
-                \item \textbf{Awards:} Dean's List, High Honors (Spring 2025, Fall 2025)
+                \item \textbf{QPA:} 3.65/4.00 
+                \item \textbf{Relevant Coursework:} Computer Systems, Parallel \& Sequential Data Structures \& Algorithms, Computer Security, Generative AI (Graduate), Machine Learning, Statistical Computing, Functional Programming, Theoretical Computer Science
+                \item \textbf{Awards:} Dean's List, High Honors
             \end{highlights}
         \end{onecolentry}
+
     \section{Experience}
-        \begin{twocolentry}{\text{January 2026 - Present}}
-            \textbf{Teaching Assistant, Principles of Functional Programming (15-150)}
+        \begin{twocolentry}{\text{May 2026 - August 2026}}
+            \textbf{Software Developer Intern}
+        \end{twocolentry}
+        \begin{twocolentry}{\text{San Jose, CA}}
+            \textit{IBM}
+        \end{twocolentry}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built an AI-agent observability connector for watsonx.governance, integrating three vendor APIs (Arrow Flight/gRPC, GraphQL, REST) to normalize per-agent cost, latency, error-rate, and LLM evaluator scores.
+                \item Instrumented multi-agent LangGraph systems on two observability platforms (Arize AX, Phoenix) with OpenTelemetry/OpenInference, emitting all 8 span kinds plus PII/guardrail spans.
+                \item Cut peak worker memory 6.4$\times$ by chunking unbounded, customer-controlled span exports, and reduced live-path API calls 22$\rightarrow$1 ($\sim$95\%) by redesigning around a $\sim$1,000 query-complexity cap.
+                \item Wrote 373 tests at $\sim$2:1 test-to-source, including a differential-oracle suite that recomputes every metric independently over 1,500 randomized inputs and 16,000 percentile comparisons.
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{\text{January 2026 - May 2026}}
+            \textbf{Teaching Assistant}
         \end{twocolentry}
         \begin{twocolentry}{\text{Pittsburgh, PA}}
             \textit{Carnegie Mellon University}
         \end{twocolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Graded 300+ student submissions in SML, providing technical feedback on correctness, efficiency, and style of recursive, parallel, and higher-order algorithms.
-                \item Led weekly labs for 20+ students and collaborated with course staff on assignment design and grading.
+                \item Led weekly 1.5-hour recitations and 3 hours of office hours for 20+ students in 15-150 Principles of Functional Programming, CMU's required course on SML, recursion, and proofs of program correctness.
+                \item Graded 300+ homework and exam submissions weekly in SML, giving technical feedback on correctness, efficiency, and style across recursive, higher-order, and parallel implementations.
             \end{highlights}
         \end{onecolentry}
 
         \begin{twocolentry}{
-            \text{September 2025 - Present}}
-            \textbf{Research Assistant, CERN CMS Experiment}
+            \text{September 2025 - May 2026}}
+            \textbf{Research Assistant}
         \end{twocolentry}
         \begin{twocolentry}{
             \text{Pittsburgh, PA}}
             \textit{Carnegie Mellon University}
         \end{twocolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Built a training and evaluation pipeline in PyTorch and PyG for quantization-aware graph neural networks, processing particle physics datasets from raw ROOT files through feature extraction and graph construction.
-                \item Analyzing CERN HGCAL detector data to prepare adaptation of transformer-based clustering models from synthetic to real particle physics data.
+                \item Owned the training and evaluation harness for quantization-aware, FPGA-bound GNNs at CERN CMS: resumable checkpointing, CLI-driven hyperparameter sweeps, and evaluation against the PUPPI baseline.
+                \item Adapted lightweight PyTorch transformer models for use in particle clustering on CERN HGCAL data, creating a custom data pipeline with NumPy and Awkward to properly load in data for training.
             \end{highlights}
         \end{onecolentry}
-        \begin{twocolentry}{
-        \text{June 2025 – August 2025}}
-            \textbf{Research Assistant, SPICE Lab}
-        \end{twocolentry} 
-        \begin{twocolentry}{
-            \text{Pittsburgh, PA}}
-        \textit{Carnegie Mellon University}
-        \end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Engineered a data preprocessing pipeline using R Tidyverse, Pandas, NumPy, and SciKit-Learn to clean and normalize large-scale energy consumption datasets.
-                \item Developed a neural network with PyTorch to forecast households' annual cooling energy, engineering a 75\% accuracy improvement by implementing LightGBM-based feature selection and hyperparameter tuning.
-            \end{highlights}
-        \end{onecolentry}
+        % \begin{twocolentry}{
+        % \text{June 2025 – August 2025}}
+        %     \textbf{Research Assistant, SPICE Lab}
+        % \end{twocolentry} 
+        % \begin{twocolentry}{
+        %     \text{Pittsburgh, PA}}
+        % \textit{Carnegie Mellon University}
+        % \end{twocolentry}
+        % \vspace{0.10 cm}
+        % \begin{onecolentry}
+        %     \begin{highlights}
+        %         \item Engineered a Python data pipeline (Pandas, NumPy, scikit-learn) to clean, normalize, and extract features from structured energy datasets.
+        %         \item Optimized PyTorch neural networks using LightGBM feature selection and hyperparameter tuning, improving accuracy by 75\% over initial baseline.
+        %     \end{highlights}
+        % \end{onecolentry}
 
         % \vspace{0.2 cm}
         
@@ -302,13 +316,13 @@
     \section{Projects}
         % shortened version
         \begin{twocolentry}{\text{February 2026}}
-            \textbf{PharmaSentinel} $|$ \textit{Python, React, TypeScript, Supabase, OpenAI API}
+            \textbf{PharmaSentinel} $|$ \textit{Python, PostgreSQL, Supabase, OpenAI API}
         \end{twocolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry} 
             \begin{highlights}
-                \item Orchestrated a multi-agent pipeline using Python, OpenAI API, and Brave Search MCP to monitor inventory, analyze supply chain news, and query openFDA data to detect drug shortages and identify substitutes.
-                \item Designed PostgreSQL triggers and Supabase Realtime listeners to detect inventory changes, re-run the agent pipeline, and push shortage alerts, resolutions, and draft purchase orders to a live dashboard.
+                \item Engineered a multi-agent backend system in Python, orchestrating external REST APIs (OpenAI, openFDA) to automate real-time supply chain monitoring and substitute identification.
+                \item Architected event-driven PostgreSQL databases utilizing Supabase Realtime to detect inventory state changes, automatically triggering agent pipelines and routing resolutions to downstream clients.
             \end{highlights}            
         \end{onecolentry}
         \begin{twocolentry}{
@@ -316,14 +330,14 @@
             \textbf{Computer Systems} $|$ \textit{C, POSIX threads}
         \end{twocolentry}
 
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
                 % \item \textbf{Cache Simulator} Developed a write-back/write-allocate cache simulator with LRU eviction policy that parses instruction traces, accurately modeling hit/miss/eviction rates across various cache geometries.
-                \item \textbf{Dynamic Memory Allocator}: Implemented a malloc/free replacement using segregated free lists and coalescing, achieving 74.3\% utilization and 15,885 kops/sec throughput (top of class).
+                \item \textbf{Dynamic Memory Allocator}: Developed a dynamic memory allocator in C for Linux. Achieved 74.3\% memory utilization and a throughput of 15885 kilo-operations per second, ranking at the top of the class.
                 \item \textbf{Tiny Linux Shell}: Engineered a Linux shell featuring foreground/background job control, I/O redirection, and robust signal handling to manage concurrent process execution.
                 % \item \textbf{Web Proxy Server}: Created a multithreaded web proxy server that facilitates communication between clients and web servers.
-                \item \textbf{Shark File System}: Developed a thread-safe concurrent file system with standard features (e.g. file renaming, file descriptor position management), optimizing multithreaded performance and correctness with mutex synchronization.
+                \item \textbf{Shark File System}: Built a thread-safe concurrent file system with file renaming and descriptor position management, using mutex synchronization for multithreaded correctness.
             \end{highlights}
         \end{onecolentry}
         % \begin{twocolentry}{\text{July 2025}}
@@ -359,11 +373,12 @@
     %     \end{onecolentry}
     \section{Skills}
         \begin{onecolentry}
-            \textbf{Programming Languages:} Python, C, SQL, SML, OCaml, Dafny, x86-64 Assembly, R \newline
-            \textbf{Frameworks/Libraries:} Pandas, NumPy, scikit-learn, PyTorch, OpenAI API, Supabase, MCP \newline
-            \textbf{Developer Tools:} Git, Linux, GDB, Valgrind
+            \textbf{Programming Languages:} Python, C, C++, SQL, SML, x86-64 Assembly \newline
+            \textbf{Backend \& APIs:} FastAPI, asyncio, Redis, GraphQL, REST, PostgreSQL, Supabase, Docker, Linux \newline
+            \textbf{AI \& Observability:} LangGraph, OpenTelemetry, OpenInference, Arize AX/Phoenix, MCP, OpenAI API \newline
+            \textbf{Data \& Testing:} pandas, NumPy, PyTorch, Apache Arrow Flight, pytest, Git, GDB, Valgrind
         \end{onecolentry}
-    \vspace{0.20 cm}
+    \vspace{0.10 cm}
 
     
 
