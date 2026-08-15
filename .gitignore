@@ -10,3 +10,14 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# macOS
+.DS_Store
+
+# Internship notes — contains internal work details, never publish
+internship-summary*.md
+
+# Role-specific resume variants kept locally, not published
+MLE/
+DS/
+DE/
